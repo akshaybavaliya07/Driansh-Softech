@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon">
+  <style>
+    
+      line {
+        transition: all 0.3s ease;
+      }
+      svg:hover line:nth-child(1) {
+        transform: translateY(3px);
+        stroke: #1d4ed8;
+      }
+      svg:hover line:nth-child(2) {
+        transform: scaleX(0.8);
+        stroke: #1d4ed8;
+      }
+      svg:hover line:nth-child(3) {
+        transform: translateY(-3px);
+        stroke: #1d4ed8;
+      }
+    
+  </style>
+  <line x1="4" y1="6" x2="20" y2="6"></line>
+  <line x1="4" y1="12" x2="20" y2="12"></line>
+  <line x1="4" y1="18" x2="20" y2="18"></line>
+</svg>
