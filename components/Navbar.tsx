@@ -11,47 +11,56 @@ export default function Navbar() {
 
   const navItems = [
     {
-      name: "Services",
+      name: "SERVICES",
       dropdown: [
-        "FreeSWITCH Development",
-        "WebRTC Development",
-        "Asterisk Development",
-        "OpenSIPs Development",
-        "Kamailio Development",
-        "Android Development",
-        "iOS Development",
-        "React Native Development",
-        "Flutter App Development",
-        "Front End Development",
-        "Back End Development",
+        { label: "FreeSWITCH Development", path: "#" },
+        { label: "WebRTC Development", path: "#" },
+        { label: "Asterisk Development", path: "#" },
+        { label: "OpenSIPs Development", path: "#" },
+        { label: "Kamailio Development", path: "#" },
+        { label: "Android Development", path: "#" },
+        { label: "iOS Development", path: "#" },
+        { label: "React Native Development", path: "#" },
+        { label: "Flutter App Development", path: "#" },
+        { label: "Front End Development", path: "#" },
+        { label: "Back End Development", path: "#" },
       ],
     },
     {
-      name: "Solutions",
+      name: "SOLUTIONS",
       dropdown: [
-        "VOIP Solutions",
-        "Open Source Solutions",
-        "Platform Solutions",
-        "Mobile App Solutions",
-        "Web Solutions",
+        { label: "VOIP Solutions", path: "#" },
+        { label: "Open Source Solutions", path: "#" },
+        { label: "Platform Solutions", path: "#" },
+        { label: "Mobile App Solutions", path: "#" },
+        { label: "Web Solutions", path: "#" },
       ],
     },
     {
-      name: "Our Products",
-      dropdown: ["ASTPP", "iCallify", "Fonimo"],
+      name: "OUR PRODUCTS",
+      dropdown: [
+        { label: "ASTPP", path: "#" },
+        { label: "iCallify", path: "#" },
+        { label: "Fonimo", path: "#" },
+      ],
     },
     {
-      name: "Hire Developers",
-      dropdown: ["Hire VOIP Developers", "Hire Mobile Developers"],
+      name: "HIRE DEVELOPERS",
+      dropdown: [
+        { label: "Hire VOIP Developers", path: "#" },
+        { label: "Hire Mobile Developers", path: "#" },
+      ],
     },
-    { name: "About", dropdown: ["Company", "Team", "Careers"] },
+    {
+      name: "ABOUT",
+      path: "/about-us",
+    },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md border-b border-gray-100">
       <div className="container mx-auto px-10 relative">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <img
               src="/logo.jpg"
@@ -69,17 +78,19 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8 ml-auto mr-8">
             {navItems.map((item) => (
               <div
                 key={item.name}
                 className="relative"
-                onMouseEnter={() => setActiveDropdown(item.name)}
+                onMouseEnter={() =>
+                  item.dropdown ? setActiveDropdown(item.name) : null
+                }
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
-                  href="#"
-                  className="flex items-center space-x-1 font-medium text-gray-800 hover:text-blue-600 transition-colors"
+                  href={item.path || "#"}
+                  className="flex items-center space-x-1 font-medium text-md text-gray-800 hover:text-blue-600 transition-colors"
                 >
                   <span>{item.name}</span>
                   {item.dropdown && <ChevronDown className="w-4 h-4" />}
@@ -114,29 +125,32 @@ export default function Navbar() {
 
       {/* Full-width Desktop Dropdown */}
       <AnimatePresence>
-        {activeDropdown && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="absolute top-full left-0 w-screen bg-gray-100 z-40 shadow-xl overflow-hidden"
-          >
-            <div className="container mx-auto px-10 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {navItems
-                .find((item) => item.name === activeDropdown)!
-                .dropdown.map((label, idx) => (
-                  <Link
-                    key={idx}
-                    href="#"
-                    className="block text-gray-800 hover:text-blue-600 transition-colors py-1"
-                  >
-                    {label}
-                  </Link>
-                ))}
-            </div>
-          </motion.div>
-        )}
+        {activeDropdown &&
+          navItems.find((item) => item.name === activeDropdown)?.dropdown && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="absolute top-full left-0 w-screen bg-gray-100 z-40 shadow-xl overflow-hidden"
+              onMouseEnter={() => setActiveDropdown(activeDropdown)}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <div className="container mx-auto px-10 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                {navItems
+                  .find((item) => item.name === activeDropdown)
+                  ?.dropdown?.map((dropItem, idx) => (
+                    <Link
+                      key={idx}
+                      href={dropItem.path}
+                      className="block text-gray-800 hover:text-blue-600 transition-colors py-1"
+                    >
+                      {dropItem.label}
+                    </Link>
+                  ))}
+              </div>
+            </motion.div>
+          )}
       </AnimatePresence>
 
       {/* Mobile Menu */}
@@ -153,7 +167,7 @@ export default function Navbar() {
               {navItems.map((item) => (
                 <div key={item.name}>
                   <Link
-                    href="#"
+                    href={item.path || "#"}
                     className="block font-medium text-gray-700 py-2 hover:text-blue-600"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -161,14 +175,14 @@ export default function Navbar() {
                   </Link>
                   {item.dropdown && (
                     <div className="ml-4 space-y-1">
-                      {item.dropdown.map((label, idx) => (
+                      {item.dropdown.map((dropItem, idx) => (
                         <Link
                           key={idx}
-                          href="#"
+                          href={dropItem.path}
                           className="block text-sm text-gray-600 py-1 hover:text-blue-600"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          {label}
+                          {dropItem.label}
                         </Link>
                       ))}
                     </div>
