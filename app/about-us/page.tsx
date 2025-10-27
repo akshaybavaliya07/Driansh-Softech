@@ -1,30 +1,14 @@
 "use client";
 
-import { about_cards, about_features } from "@/constants/index";
+import { ABOUT_PAGE_SECTIONS, ABOUT_PAGE_FEATURES, ABOUT_PAGE_TECH_ADVANTAGES } from "@/constants/index";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { PhoneCall, Zap, DollarSign, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function AboutUs() {
-  const features = [
-    {
-      icon: <PhoneCall className="w-8 h-8 text-blue-600" />,
-      title: "VoIP Specialists",
-      desc: "Deep expertise in FreeSWITCH, FusionPBX, and Kamailio platforms.",
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-blue-600" />,
-      title: "Startup Agility",
-      desc: "Fast decision-making and rapid deployment capabilities.",
-    },
-    {
-      icon: <DollarSign className="w-8 h-8 text-blue-600" />,
-      title: "Cost Effective",
-      desc: "Competitive pricing with no compromise on quality.",
-    },
-  ];
+  
   return (
     <>
       <section
@@ -94,7 +78,7 @@ export default function AboutUs() {
       <section className="relative py-12 bg-linear-to-b from-gray-50 to-white overflow-hidden">
         <div className="container mx-auto px-6 md:px-16 lg:px-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {about_cards.map((card, index) => (
+            {ABOUT_PAGE_SECTIONS.map((card, index) => (
               <motion.div
                 key={card.title}
                 initial={{ opacity: 0, y: 50 }}
@@ -138,7 +122,7 @@ export default function AboutUs() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-stretch">
-            {about_features.map((item, idx) => (
+            {ABOUT_PAGE_FEATURES.map((item, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 60 }}
@@ -195,7 +179,7 @@ export default function AboutUs() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            {features.map((item, idx) => (
+            {ABOUT_PAGE_TECH_ADVANTAGES.map((item, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 60 }}
