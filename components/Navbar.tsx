@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { navItems } from "@/constants/index";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,54 +9,6 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const navItems = [
-    {
-      name: "SERVICES",
-      dropdown: [
-        { label: "FreeSWITCH Development", path: "#" },
-        { label: "WebRTC Development", path: "#" },
-        { label: "Asterisk Development", path: "#" },
-        { label: "OpenSIPs Development", path: "#" },
-        { label: "Kamailio Development", path: "#" },
-        { label: "Android Development", path: "#" },
-        { label: "iOS Development", path: "#" },
-        { label: "React Native Development", path: "#" },
-        { label: "Flutter App Development", path: "#" },
-        { label: "Front End Development", path: "#" },
-        { label: "Back End Development", path: "#" },
-      ],
-    },
-    {
-      name: "SOLUTIONS",
-      dropdown: [
-        { label: "VOIP Solutions", path: "#" },
-        { label: "Open Source Solutions", path: "#" },
-        { label: "Platform Solutions", path: "#" },
-        { label: "Mobile App Solutions", path: "#" },
-        { label: "Web Solutions", path: "#" },
-      ],
-    },
-    {
-      name: "OUR PRODUCTS",
-      dropdown: [
-        { label: "ASTPP", path: "#" },
-        { label: "iCallify", path: "#" },
-        { label: "Fonimo", path: "#" },
-      ],
-    },
-    {
-      name: "HIRE DEVELOPERS",
-      dropdown: [
-        { label: "Hire VOIP Developers", path: "#" },
-        { label: "Hire Mobile Developers", path: "#" },
-      ],
-    },
-    {
-      name: "ABOUT",
-      path: "/about-us",
-    },
-  ];
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md border-b border-gray-100">

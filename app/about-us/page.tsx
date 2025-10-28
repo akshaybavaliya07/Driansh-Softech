@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export default function AboutUs() {
+export default function AboutUsPage() {
   
   return (
     <>
@@ -19,7 +19,7 @@ export default function AboutUs() {
       >
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-xl md:text-5xl font-semibold mb-3">About Us</h1>
-          <p className="text-lmd md:text-lg font-medium max-w-2xl mx-auto">
+          <p className="text-md md:text-lg font-medium max-w-2xl mx-auto">
             We are a passionate VoIP solutions startup focused on delivering
             innovative and scalable communication systems.
           </p>
@@ -173,7 +173,7 @@ export default function AboutUs() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
             Why Choose Our VoIP Startup?
           </h2>
-          <p className="text-md md:text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
+          <p className="text-md md:text-lg text-gray-500 mb-12 max-w-3xl mx-auto">
             We combine startup innovation with specialized VoIP expertise to
             deliver exceptional results.
           </p>
