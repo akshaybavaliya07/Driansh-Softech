@@ -1,6 +1,10 @@
 "use client";
 
-import { ABOUT_PAGE_SECTIONS, ABOUT_PAGE_FEATURES, ABOUT_PAGE_TECH_ADVANTAGES } from "@/constants/index";
+import {
+  ABOUT_PAGE_SECTIONS,
+  ABOUT_PAGE_FEATURES,
+  ABOUT_PAGE_TECH_ADVANTAGES,
+} from "@/constants/index";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -8,7 +12,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function AboutUsPage() {
-  
   return (
     <>
       <section
@@ -25,7 +28,6 @@ export default function AboutUsPage() {
           </p>
         </div>
       </section>
-
       <section className="relative py-24 bg-linear-to-b from-white to-gray-50 overflow-hidden">
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-180 h-180 rounded-full blur-3xl opacity-30"></div>
         <div className="container mx-auto px-6 md:px-16 lg:px-24 relative z-10 flex flex-col md:flex-row items-center gap-16">
@@ -45,7 +47,6 @@ export default function AboutUsPage() {
               <div className="absolute inset-0 bg-linear-to-r from-blue-900/10 to-transparent rounded-3xl"></div>
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -74,7 +75,6 @@ export default function AboutUsPage() {
           </motion.div>
         </div>
       </section>
-
       <section className="relative py-12 bg-linear-to-b from-gray-50 to-white overflow-hidden">
         <div className="container mx-auto px-6 md:px-16 lg:px-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -95,7 +95,7 @@ export default function AboutUsPage() {
                     <img
                       src={card.image}
                       alt={card.title}
-                      className="w-16 h-16 mb-5 object-contain transition-transform duration-700 group-hover:scale-110"
+                      className="w-16 h-16 mb-5 object-contain transition-all duration-700 group-hover:brightness-0 group-hover:invert"
                     />
                     <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4 transition-colors group-hover:text-white">
                       {card.title}
@@ -110,7 +110,6 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
@@ -167,7 +166,6 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-gray-100 py-12">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
@@ -219,7 +217,6 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-gray-50 py-20">
         <motion.div
           className="max-w-4xl mx-auto text-center px-6"

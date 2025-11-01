@@ -37,7 +37,7 @@ export default function FAQ({ sub_title, data }: FAQSectionProps) {
               <AccordionTrigger className="flex justify-between items-center w-full text-[#1D1A4E] px-6 py-4 font-bold text-lg no-underline hover:no-underline">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-lg px-6 pb-4 bg-transparent shadow-none">
+              <AccordionContent className="text-lg px-6 pb-4 bg-transparent shadow-none whitespace-pre-line">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

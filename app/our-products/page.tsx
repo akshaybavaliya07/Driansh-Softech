@@ -32,7 +32,7 @@ export default function OurProductsPage() {
           viewport={{ once: true }}
           className="w-full md:w-1/2 flex justify-center"
         >
-          <div className="w-[90%] sm:w-[80%] md:w-[550px]">
+          <div className="w-[90%] sm:w-[80%] md:w-[70%]">
             <Image
               src={product.image}
               alt={product.title}
@@ -82,7 +82,7 @@ export default function OurProductsPage() {
           </ul>
 
           <div className="flex justify-center md:justify-start">
-            <Button className="bg-blue-700 hover:bg-blue-800 text-white rounded-lg text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
+            <Button className="bg-blue-700 hover:bg-blue-800 text-white rounded-lg text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-6">
               {product.buttonText}
             </Button>
           </div>
