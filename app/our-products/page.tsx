@@ -81,11 +81,11 @@ export default function OurProductsPage() {
             ))}
           </ul>
 
-          <div className="flex justify-center md:justify-start">
+          {/* <div className="flex justify-center md:justify-start">
             <Button className="bg-blue-700 hover:bg-blue-800 text-white rounded-lg text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-6">
               {product.buttonText}
             </Button>
-          </div>
+          </div> */}
         </motion.div>
       </motion.section>
     );

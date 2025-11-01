@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/Contact-Form";
 
 export default function ContactPage() {
   return (
-    <section className="min-h-screen py-16 flex flex-col items-center">
+    <section className="min-h-screen py-16 flex flex-col items-center mt-20">
       <div className="text-center mb-12 px-4">
         <h1 className="text-4xl font-bold">Contact Us</h1>
         <p className="mt-2 text-gray-600">

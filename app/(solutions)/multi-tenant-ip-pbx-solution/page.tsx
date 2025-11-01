@@ -17,7 +17,7 @@ import { motion } from "framer-motion";
 export default function MTIpPbxPage() {
   return (
     <>
-      <section className="relative flex items-center justify-end h-auto min-h-[80vh] w-full overflow-hidden">
+      <section className="relative flex items-center justify-end h-auto min-h-[90vh] w-full overflow-hidden">
         <Image
           src="/images/solutions/multi-tenant/image-01.webp"
           alt="Multi Tenant IP PBX"

@@ -14,7 +14,7 @@ import { Check } from "lucide-react";
 export default function VoiceBroadcastringPage() {
   return (
     <>
-      <section className="relative flex items-center justify-end h-auto min-h-[80vh] w-full overflow-hidden">
+      <section className="relative flex items-center justify-end h-auto min-h-[90vh] w-full overflow-hidden">
         <Image
           src="/images/solutions/voice-broadcasting/image-01.webp"
           alt="Voice Broadcasting Solution"

@@ -9,7 +9,7 @@ import FAQ from "@/components/FAQ";
 export default function CallingCardPage() {
   return (
     <>
-      <section className="relative flex items-center justify-end h-auto min-h-[80vh] w-full overflow-hidden">
+      <section className="relative flex items-center justify-end h-auto min-h-[90vh] w-full overflow-hidden">
         <Image
           src="/images/solutions/calling-card/image-01.jpg"
           alt="Calling Card Solution"

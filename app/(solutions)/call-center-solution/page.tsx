@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 export default function CallCenterPage() {
   return (
     <>
-      <section className="relative flex items-center justify-end h-auto min-h-[80vh] w-full overflow-hidden">
+      <section className="relative flex items-center justify-end h-auto min-h-[90vh] w-full overflow-hidden">
         <Image
           src="/images/solutions/call-center/image-01.webp"
           alt="Contact Center Solution"

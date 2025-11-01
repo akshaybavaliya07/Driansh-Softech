@@ -14,7 +14,7 @@ import FAQ from "@/components/FAQ";
 export default function Class5SoftwitchPage() {
   return (
     <>
-      <section className="relative flex items-center justify-end h-auto min-h-[80vh] w-full overflow-hidden">
+      <section className="relative flex items-center justify-end h-auto min-h-[90vh] w-full overflow-hidden">
         <Image
           src="/images/solutions/class5-softwitch/image-01.webp"
           alt="Class 5 Softswitch"

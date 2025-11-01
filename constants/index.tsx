@@ -12,53 +12,91 @@ export const navItems = [
   {
     name: "SERVICES",
     dropdown: [
-      { label: "FreeSWITCH Development", path: "#" },
-      { label: "WebRTC Development", path: "#" },
-      { label: "Asterisk Development", path: "#" },
-      { label: "OpenSIPs Development", path: "#" },
-      { label: "Kamailio Development", path: "#" },
-      { label: "Android Development", path: "#" },
-      { label: "iOS Development", path: "#" },
-      { label: "React Native Development", path: "#" },
-      { label: "Flutter App Development", path: "#" },
-      { label: "Front End Development", path: "#" },
-      { label: "Back End Development", path: "#" },
+      {
+        title: "VOIP DEVELOPMENT",
+        path: "/services/voip",
+        items: [
+          { label: "FreeSWITCH Development", path: "/services/freeswitch" },
+          { label: "WebRTC Development", path: "/services/webRTC" },
+          { label: "Asterisk Development", path: "/services/asterisk" },
+          { label: "OpenSIPs Development", path: "/services/openSIPs" },
+          { label: "Kamailio Development", path: "/services/kamailio" },
+        ],
+      },
+      {
+        title: "OPEN SOURCE",
+        path: "#",
+        items: [
+          { label: "Kazoo Development", path: "/services/open-source/kazoo" },
+          { label: "FusionPBX Development", path: "/services/open-source/fusionPBX" },
+          { label: "Linphone Development", path: "/services/open-source/linphone" },
+        ],
+      },
+      {
+        title: "PLATFORM",
+        path: "#",        
+        items: [{ label: "SignalWire Development", path: "/services/paltform/signalwire" }],
+      },
+      {
+        title: "DEVOPS SERVICES",
+        path: "/services/devops",
+        items: [],
+      },
+      {
+        title: "PRODUCT ENGINEERING",
+        path: "/services/devopsproduct",
+        items: [],
+      },
+      {
+        title: "VOIP SERVICES",
+        path: "/services/voiptesting",
+        items: [],
+      },
+      {
+        title: "MOBILE APP DEVELOPMENT",
+        path: "/services/mobile-app/android",
+        items: [
+          { label: "Android Development", path: "/services/mobile-app/android" },
+          { label: "iOS Development", path: "/services/mobile-app/ios" },
+          { label: "React Native Development", path: "/services/mobile-app/react" },
+          { label: "Flutter App Development", path: "/services/mobile-app/flutter" },
+        ],
+      },
+      {
+        title: "WEB DEVELOPMENT",
+        path: "/services/web-dev/web",
+        items: [
+          { label: "Front End Development", path: "/services/web-dev/fronted" },
+          { label: "Back End Development", path: "/services/web-dev/backend" },
+        ],
+      },
     ],
   },
   {
     name: "SOLUTIONS",
     dropdown: [
-      // { label: "VoIP Solutions", path: "/voip-solutions" },
-      { label: "Multi Tenant IP PBXSolution", path: "/multi-tenant-ip-pbx-solution" },
-      { label: "Call Center Solutions", path: "/call-center-solution" },
-      { label: "Voice Broadcasting Solution", path: "/voice-broadcasting-solution" },
-      { label: "Audio & Video Conferencing Solution", path: "/audio-video-conferencing-solution" },
-      { label: "Unified Communications Solution", path: "/unified-communications-solution" },
-      { label: "Class 5 Softswitch Solution", path: "/class-5-softswitch-solution" },
-      { label: "Class 4 Softswitch Solution", path: "/class-4-softswitch-solution" },
-      { label: "VoIP Billing Solution", path: "/voip-billing-solution" },
-      { label: "Calling Card Solution", path: "/calling-card-solution" },
-      { label: "Enterprise VoIP Solution", path: "/enterprise-voip-solutions" },
-      { label: "VoIP Business Solutions", path: "/voip-business-solutions" },
-      { label: "Faxing Solution", path: "/faxing-solution" },
-      { label: "Live Call Monitoring Solution", path: "/live-call-monitoring-solution" },
+      {
+        title: "TAILORCRAFT SOLUTIONS",
+        items: [
+          { label: "Multi Tenant IP PBX Solution", path: "/multi-tenant-ip-pbx-solution" },
+          { label: "Call Center Solution", path: "/call-center-solution" },
+          { label: "Voice Broadcasting Solution", path: "/voice-broadcasting-solution" },
+          { label: "Audio & Video Conferencing Solution", path: "/audio-video-conferencing-solution" },
+          { label: "Unified Communication Solution", path: "/unified-communications-solution" },
+          { label: "Class 5 Softswitch Solution", path: "/class-5-softswitch-solution" },
+          { label: "Class 4 Softswitch Solution", path: "/class-4-softswitch-solution" },
+          { label: "VoIP Billing Solution", path: "/voip-billing-solution" },
+          { label: "Calling Card Solution", path: "/calling-card-solution" },
+          { label: "Enterprise VoIP Solution", path: "/enterprise-voip-solutions" },
+          { label: "VoIP Business Solutions", path: "/voip-business-solutions" },
+          { label: "Faxing Solution", path: "/faxing-solution" },
+          { label: "Live Call Monitoring Solution", path: "/live-call-monitoring-solution" },
+        ],
+      },
     ],
   },
-  {
-    name: "OUR PRODUCTS",
-    path: "/our-products",
-  },
-  {
-    name: "HIRE DEVELOPERS",
-    dropdown: [
-      { label: "Hire VOIP Developers", path: "#" },
-      { label: "Hire Mobile Developers", path: "#" },
-    ],
-  },
-  {
-    name: "ABOUT",
-    path: "/about-us",
-  },
+  { name: "OUR PRODUCTS", path: "/our-products" },
+  { name: "ABOUT", path: "/about-us" },
 ];
 
 export const ABOUT_PAGE_SECTIONS = [
@@ -129,7 +167,7 @@ export const OUR_PRODUCTS = [
       "Real-time analytics and performance dashboards",
       "Smart automation for faster response and resolution",
     ],
-    buttonText: "Visit Conatact Center",
+    // buttonText: "Visit Conatact Center",
     reverse: false,
   },
 ];
