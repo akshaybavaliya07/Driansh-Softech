@@ -11,7 +11,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   contactSchema,
   ContactFormData,
-} from "@/lib/validations/contact-schema";
+} from "@/validations/contact-schema";
+import { sendMail } from "@/actions/sendContactUsMail";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,9 +38,7 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    // submission logic here
-    console.log(data); // For demonstration
-    await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulate API call
+    await sendMail(data);
     setIsSubmitting(false);
     setSuccessMsg("Thank you! We'll contact you soon.");
     reset();
